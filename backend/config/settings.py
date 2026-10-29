@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-&pnk%eha0tz!!-d=5exev6545*e7&#8gfb=x4q=bqbnl5#l1nz
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -58,7 +58,7 @@ MIDDLEWARE = [
 
 # Read from environment so local and production work the same way
 DEBUG = os.getenv("DEBUG", "1") == "1"
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "levatronicon.pythonanywhere.com"]
+ALLOWED_HOSTS = os.environ['ALLOWED_HOSTS'] = 'levatronicon.pythonanywhere.com'
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
